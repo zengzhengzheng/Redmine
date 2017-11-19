@@ -83,6 +83,7 @@ group :development do
   gem "capistrano", "~> 3.4"
   gem "capistrano-rvm"
   gem "capistrano-rails"
+  gem "capistrano-passenger"
 end
 
 group :test do
@@ -93,6 +94,8 @@ group :test do
   gem 'puma', '~> 3.7'
   gem "capybara", '~> 2.13'
   gem "selenium-webdriver"
+  gem "capistrano-rails"
+  gem "capistrano-passenger"
 end
 
 local_gemfile = File.join(File.dirname(__FILE__), "Gemfile.local")
