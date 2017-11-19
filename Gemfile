@@ -80,6 +80,9 @@ end
 group :development do
   gem "rdoc", "~> 4.3"
   gem "yard"
+  gem "capistrano", "~> 3.4"
+  gem "capistrano-rvm"
+  gem "capistrano-rails"
 end
 
 group :test do
