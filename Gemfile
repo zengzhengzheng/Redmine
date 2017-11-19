@@ -77,13 +77,24 @@ else
   warn("Please configure your config/database.yml first")
 end
 
+  gem 'pg'
+
+group :development, :test do
+  gem 'capistrano-rails'
+  gem 'capistrano-passenger'
+  gem 'rspec-rails'
+  gem 'byebug', platform: :mri
+end
+
 group :development do
-  gem "rdoc", "~> 4.3"
-  gem "yard"
   gem "capistrano", "~> 3.4"
   gem "capistrano-rvm"
   gem "capistrano-rails"
-  gem "capistrano-passenger"
+end
+
+group :development do
+  gem "rdoc", "~> 4.3"
+  gem "yard"
 end
 
 group :test do
@@ -94,8 +105,6 @@ group :test do
   gem 'puma', '~> 3.7'
   gem "capybara", '~> 2.13'
   gem "selenium-webdriver"
-  gem "capistrano-rails"
-  gem "capistrano-passenger"
 end
 
 local_gemfile = File.join(File.dirname(__FILE__), "Gemfile.local")
