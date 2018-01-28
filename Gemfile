@@ -77,7 +77,7 @@ else
   warn("Please configure your config/database.yml first")
 end
 
-  gem 'pg'
+  # gem 'pg'
 
 group :development, :test do
   gem 'capistrano-rails'
