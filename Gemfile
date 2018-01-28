@@ -80,8 +80,6 @@ end
   # gem 'pg'
 
 group :development, :test do
-  gem 'capistrano-rails'
-  gem 'capistrano-passenger'
   gem 'rspec-rails'
   gem 'byebug', platform: :mri
 end
@@ -90,6 +88,7 @@ group :development do
   gem "capistrano", "~> 3.4"
   gem "capistrano-rvm"
   gem "capistrano-rails"
+  gem 'capistrano-passenger'
 end
 
 group :development do
